@@ -21,13 +21,13 @@ Basé sur [spaCy==2.3.5](https://spacy.io/), [fr_core_news_md](https://spacy.io/
 - [Installation](#installation)
 - [Usage](#usage)
 - [API](#api)
-- [PistesFutures](#pistesFutures)
+- [Exemple](#exemple)
 
 ## Installation
 
 Cloner le projet depuis notre site Github : 
 ```bash
-$ https://github.com/Hefr-y/SynTriplets.git
+$ git clone https://github.com/Hefr-y/projet_syn.git
 ```
 
 Ce projet utilise [spaCy](https://spacy.io/) et [gensim](https://github.com/RaRe-Technologies/gensim). Allez les voir si vous ne les avez pas installés localement :
@@ -48,7 +48,7 @@ $ pip install -U spacy==2.3.5
 Cloner le projet depuis notre site Github : 
 
 ```bash
-$ git clone https://github.com/Hefr-y/pinyinALAO.git
+$ git clone https://github.com/Hefr-y/projet_syn.git
 ```
 
 **[Pipenv](https://github.com/pypa/pipenv) peut être installé avec Python 3.6 et plus.**
@@ -93,91 +93,30 @@ $ pipenv shell
 $ cd Desktop
 ```
 
-3. Accéder au projet via le ***cd Nom_du_Projet*** où se trouvent le fichier ***manage.py*** (Ex:si le projet est ***pinyinALAO***)
+3. Accéder au projet via le ***cd Nom_du_Projet*** où se trouvent le fichier ***run.py*** (Ex:si le projet est ***SynTriplets***)
 ```bash
-$ cd pinyinALAO
+$ cd SynTriplets
 ```
 
 4. Démarrage
 ```bash
-$ python manage.py runserver
+$ python run.py votre_fichier_textes
 ```
-Le serveur local devrait ainsi se lancer à l'adresse **http://127.0.0.1:8000/** ou **localhost:8000**
 
->**Note**<br>
->Si votre ordinateur est sous `windows`, nous vous recommandons d'utiliser un navigateur ***IE (Internet Explorer Edge)*** pour accéder aux pages afin d'assurer un affichage correct du CSS.
+
+## Exemple
+
+Le [testDemo.txt](https://github.com/Hefr-y/projet_syn/blob/main/SynTriplets/testDemo.txt) dans le dossier du projet est utilisé dans ce cas.
+
+Veuillez consulter l'image ci-dessous:
+
+![image](https://github.com/Hefr-y/projet_syn/blob/main/screenshot.png)
+
+
+Enfin, un fichier **_resultats.json_** est généré dans le répertoire de travail où sont stockés les résultats de l'analyse.
+
 
 ## API
 
-> Pour API plus détaillées, veuillez consulter le fichier [views.py](https://github.com/Hefr-y/pinyinALAO/blob/main/pinyinALAO/myapp/views.py).
+> Pour API plus détaillées, veuillez consulter le fichier [run.py](https://github.com/Hefr-y/projet_syn/blob/main/SynTriplets/run.py).
 >
-> **get_py_details( *hans* )**
-
-	*obtenir des informations correctes sur un pinyin*
-
-**Args** :	
-
--  *hans* ( chaîne unicode ou liste de chaînes de caractères ) Chaînes de caractères chinoises
-
-**Returns** : Informations sur le pinyin
-
-**Type de Returns** : dict
-
-------
-
-**get_shengmu( *pinyin* )** <br>
-**get_tone( *pinyin* )**
-
-**Args** :	
-
--  *pinyin* ( chaînes de caractères ) L'entrée pinyin par l'utilisateur
-
-**Returns** : <br>
-          L'initiale de l'entrée pinyin <br>
-          La partie du ton du pinyin (chiffre)
-
-**Type de Returns** :<br> 
-          str <br>
-          digit
-
-------
-
-**get_yunmu( _pinyin,shengmu_ )**
-
-**Args** :	<br>
-
--  *pinyin* ( chaînes de caractères ) l'entrée pinyin par l'utilisateur
--  *shengmu* ( chaînes de caractères ) la partie d'initiale du pinyin
-
-**Returns** : <br> 
-la partie de finale du pinyin
-
-**Type de Returns** :<br>
-str
-
-------
-
-**Levenshtein_Distance( _str1,str2_ )**
-
-	*obtenir des informations correctes sur un pinyin*
-
-**Args** :	
-
--  *str1* ( chaînes de caractères ) N'importe quelle chaîne
--  *str2* ( chaînes de caractères ) N'importe quelle chaîne
-
-**Returns** : <br> 
-similarité des chaînes.
-
-**Type de Returns** :<br>
-float
-
-## PistesFutures
-
-- [ ] Soumettre les TODO aux [issues de Github](https://github.com/Hefr-y/pinyinALAO/issues)
-- [ ] Optimisation UI
-- [ ] Sauvegarde des informations sur le pinyin des caractères chinois dans une base de données
-- [ ] Explications en langue étrangère du vocabulaire du HSK
-- [ ] Déploiement des projets sur le serveur
-- [ ] Ajouter des traits aux caractères chinois
-- [ ] ...
