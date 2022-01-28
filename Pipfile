@@ -1,0 +1,13 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+gensim = "==4.1.2"
+spacy = "==2.3.5"
+
+[dev-packages]
+
+[requires]
+python_version = "3.8"

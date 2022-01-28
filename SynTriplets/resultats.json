@@ -1,0 +1,47 @@
+[
+    {
+        "phrase": "Les vins sont médiocres mais pas chers.",
+        "triplets": [
+            [
+                "boisson",
+                "vins",
+                "médiocres"
+            ],
+            [
+                "boisson",
+                "vins",
+                "pas_chers"
+            ]
+        ]
+    },
+    {
+        "phrase": "Il arrive souvent que les plats soient un peu tièdes.",
+        "triplets": [
+            [
+                "nourriture",
+                "plats",
+                "peu_tièdes"
+            ]
+        ]
+    },
+    {
+        "phrase": "Plats trop chauds.",
+        "triplets": [
+            [
+                "nourriture",
+                "Plats",
+                "trop_chauds"
+            ]
+        ]
+    },
+    {
+        "phrase": "Resto sympa et de peu bonnes grillades.",
+        "triplets": [
+            [
+                "nourriture",
+                "grillades",
+                "peu_bonnes"
+            ]
+        ]
+    }
+]
